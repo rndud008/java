@@ -30,6 +30,7 @@ public class ReadTextFileV2 {
 
         Stream<String> lineStream = Files.lines(path, UTF_8);
 //        lineStream.forEach(line -> System.out.println(line));
+        // 파일 내용을 전부다 불러 오는게 아니라 한줄씰 불러와서 사용.
         lineStream.forEach(System.out::println);
         lineStream.close();
 
