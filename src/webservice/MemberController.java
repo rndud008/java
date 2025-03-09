@@ -24,6 +24,7 @@ public class MemberController {
         String str = "<html><body>" +
                 "<h1>Member Manager</h1>" +
                 "<ul>" +
+
                 "<li><a href='/members'>Member List </a></li>" +
                 "<li><a href='/add-member-form'>Add New Member</a></li>" +
                 "</ul>";
