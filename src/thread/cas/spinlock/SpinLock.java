@@ -1,4 +1,4 @@
-package thread.cas.increment.cas.spinlock;
+package thread.cas.spinlock;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

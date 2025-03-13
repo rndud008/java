@@ -1,4 +1,4 @@
-package thread.cas.increment.cas;
+package thread.cas;
 
 import java.util.ArrayList;
 import java.util.List;
