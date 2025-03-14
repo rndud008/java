@@ -6,17 +6,17 @@ import static util.ThreadUtils.sleep;
 public class OldOrderService {
 
     public void order(String orderNo){
-        InventoryWork inventroyWork = new InventoryWork(orderNo);
-        ShoppingWork shoppingWork = new ShoppingWork(orderNo);
+        InventoryWork inventoryWork = new InventoryWork(orderNo);
+        ShippingWork shippingWork = new ShippingWork(orderNo);
         AccountingWork accountingWork = new AccountingWork(orderNo);
 
         // 작업요청
-        Boolean inventoryResult = inventroyWork.call();
-        Boolean shoppingResult = shoppingWork.call();
+        Boolean inventoryResult = inventoryWork.call();
+        Boolean shippingResult = shippingWork.call();
         Boolean accountingResult = accountingWork.call();
 
         // 결과 확인
-        if (inventoryResult && shoppingResult && accountingResult){
+        if (inventoryResult && shippingResult && accountingResult){
             log("모든 주문 처리가 성고적으로 완료되었습니다.");
         }else {
             log("일부 작업이 실패했습니다.");
@@ -37,10 +37,10 @@ public class OldOrderService {
         }
     }
 
-    static class ShoppingWork{
+    static class ShippingWork{
         private final String orderNo;
 
-        ShoppingWork(String orderNo) {
+        ShippingWork(String orderNo) {
             this.orderNo = orderNo;
         }
 
